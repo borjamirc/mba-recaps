@@ -42,6 +42,18 @@
         .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
         .highlight { background: #fef3c7; padding: 2px 5px; border-radius: 3px; }
         .glossary td:first-child { font-weight: bold; width: 140px; background: #f7fafc; }
+        .cover a { color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.4); transition: border-bottom-color 0.2s; }
+        .cover a:hover { border-bottom-color: white; }
+        .qa-list li { cursor: pointer; padding: 6px 4px; border-radius: 5px; transition: background 0.2s; }
+        .qa-list li:hover { background: #ebf8ff; }
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center; }
+        .modal-overlay.active { display: flex; animation: fadeIn 0.2s ease; }
+        .modal-box { background: white; border-radius: 12px; padding: 30px; max-width: 650px; width: 90%; max-height: 80vh; overflow-y: auto; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+        .modal-close { position: absolute; top: 12px; right: 18px; font-size: 28px; cursor: pointer; color: #718096; line-height: 1; transition: color 0.2s; }
+        .modal-close:hover { color: #1a365d; }
+        .modal-question { color: #1a365d; font-size: 1.1em; margin-bottom: 15px; padding-right: 30px; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; }
+        .modal-answer { color: #4a5568; line-height: 1.7; font-size: 0.95em; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
 <body>
@@ -50,8 +62,8 @@
     <h1>MBA WEEKLY STUDY RECAP</h1>
     <p><strong>Week of January 19 - 25, 2026</strong></p>
     <p>13 Sessions | 8 Courses</p>
-    <p style="font-size: 0.9em; margin-top: 20px;">Data Analytics | Supply Chain | Corporate Finance | Managerial Accounting<br>
-    Managerial Economics | BGS | Data Fluency | Leading People & Change</p>
+    <p style="font-size: 0.9em; margin-top: 20px;"><a href="#data-analytics">Data Analytics</a> | <a href="#supply-chain">Supply Chain</a> | <a href="#corporate-finance">Corporate Finance</a> | <a href="#managerial-accounting">Managerial Accounting</a><br>
+    <a href="#managerial-economics">Managerial Economics</a> | <a href="#bgs">BGS</a> | <a href="#data-fluency">Data Fluency</a> | <a href="#leading-people">Leading People &amp; Change</a></p>
     <p style="margin-top: 25px; font-size: 0.85em; opacity: 0.9;">Generated: January 25, 2026</p>
 </div>
 
@@ -82,7 +94,7 @@
 <!-- CORPORATE FINANCE -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<h3 style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">CORPORATE FINANCE</h3>
+<h3 id="corporate-finance" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">CORPORATE FINANCE</h3>
 
 <div class="session-box">
     <div class="session-header">
@@ -181,7 +193,7 @@
 <!-- DATA ANALYTICS FOR MANAGERS -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<h3 style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">DATA ANALYTICS FOR MANAGERS</h3>
+<h3 id="data-analytics" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">DATA ANALYTICS FOR MANAGERS</h3>
 
 <div class="session-box">
     <div class="session-header">
@@ -305,7 +317,7 @@
 <!-- SUPPLY CHAIN MANAGEMENT -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<h3 style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">SUPPLY CHAIN MANAGEMENT</h3>
+<h3 id="supply-chain" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">SUPPLY CHAIN MANAGEMENT</h3>
 
 <div class="session-box">
     <div class="session-header">
@@ -408,7 +420,7 @@
 <!-- MANAGERIAL ECONOMICS -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<h3 style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">MANAGERIAL ECONOMICS</h3>
+<h3 id="managerial-economics" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">MANAGERIAL ECONOMICS</h3>
 
 <div class="session-box">
     <div class="session-header">
@@ -480,7 +492,7 @@
 <!-- MANAGERIAL ACCOUNTING -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<h3 style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">MANAGERIAL ACCOUNTING</h3>
+<h3 id="managerial-accounting" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">MANAGERIAL ACCOUNTING</h3>
 
 <div class="session-box">
     <div class="session-header">
@@ -581,7 +593,7 @@
 <!-- BUSINESS, GOVERNMENT & SUSTAINABILITY -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<h3 style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">BUSINESS, GOVERNMENT & SUSTAINABILITY</h3>
+<h3 id="bgs" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">BUSINESS, GOVERNMENT & SUSTAINABILITY</h3>
 
 <div class="session-box">
     <div class="session-header">
@@ -680,7 +692,7 @@
 <!-- ISA - DATA FLUENCY -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<h3 style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">ISA - DATA FLUENCY</h3>
+<h3 id="data-fluency" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">ISA - DATA FLUENCY</h3>
 
 <div class="session-box">
     <div class="session-header">
@@ -742,7 +754,7 @@
 <!-- LEADING PEOPLE & CHANGE -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<h3 style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">LEADING PEOPLE & CHANGE</h3>
+<h3 id="leading-people" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">LEADING PEOPLE & CHANGE</h3>
 
 <div class="session-box">
     <div class="session-header">
@@ -856,19 +868,19 @@
 
 <h2>SELF-ASSESSMENT QUESTIONS</h2>
 
-<ol>
-    <li>When should you use a non-linear regression model instead of linear?</li>
-    <li>What is the Ferric Processing non-linear formula and why does it make economic sense?</li>
-    <li>Why did AHP have no debt despite being highly profitable?</li>
-    <li>What is the difference between yield to maturity and coupon rate for cost of debt?</li>
-    <li>Name Fisher's four product-supply chain combinations and their strategies.</li>
-    <li>How does Seven-Eleven Japan achieve low distribution costs despite frequent deliveries?</li>
-    <li>Under what conditions does a minimum wage benefit workers overall?</li>
-    <li>What are the 5 building blocks of a costing system?</li>
-    <li>Why is normal costing preferred over actual costing?</li>
-    <li>What non-market strategies could Xstrata use to address the Australian mining tax?</li>
-    <li>If each of 5 estimates has 60% probability of being correct, what's the combined probability?</li>
-    <li>What are preattentive visual attributes and why do they matter for data visualization?</li>
+<ol class="qa-list">
+    <li data-answer="Use non-linear when: (1) the scatter plot shows a curved relationship, (2) residual plots from a linear model show a systematic pattern rather than random distribution, or (3) the underlying economic theory suggests a non-linear relationship (e.g., economies of scale produce a hyperbolic cost curve). A higher Adjusted R&sup2; and lower Standard Error in the non-linear model confirm the better fit.">When should you use a non-linear regression model instead of linear?</li>
+    <li data-answer="The formula is Cost = a + b/Capacity (hyperbolic). It makes economic sense because: Total Cost = Fixed Cost + Variable Cost, so Average Cost = Fixed Cost/Capacity + Unit Variable Cost. As capacity increases, the fixed cost is spread over more units, creating a curve that decreases at a decreasing rate. In the Ferric case: Cost = 11.74 + 3962/Capacity with Adjusted R&sup2; = 0.94.">What is the Ferric Processing non-linear formula and why does it make economic sense?</li>
+    <li data-answer="AHP had no debt because of its deeply conservative corporate culture, risk-averse management, and no need for external financing (it was highly profitable). This illustrates the limits of corporate finance theory&mdash;the Trade-off Theory suggests firms should use debt for tax shields, but culture and management preferences can override theoretical optima. Even at 30% debt, AHP's interest coverage would have been very safe (2x Warner-Lambert at 50% debt).">Why did AHP have no debt despite being highly profitable?</li>
+    <li data-answer="Yield to Maturity (YTM) is the total return if a bond is held to maturity, reflecting current market rates. The coupon rate is the fixed annual interest payment set at issuance. For cost of debt, always use YTM because it reflects what the company would pay if it issued new debt today at current market conditions, not the historical rate locked in when the bond was originally issued.">What is the difference between yield to maturity and coupon rate for cost of debt?</li>
+    <li data-answer="Fisher's matrix matches product type to SC strategy: (1) Functional products + Efficient SC: stable demand, long life cycles, low margins&mdash;minimize cost, high utilization. (2) Functional products + Responsive SC: mismatch. (3) Innovative products + Efficient SC: mismatch. (4) Innovative products + Responsive SC: unpredictable demand, short life cycles, high margins&mdash;prioritize speed, flexibility, and buffer stock.">Name Fisher's four product-supply chain combinations and their strategies.</li>
+    <li data-answer="Seven-Eleven Japan achieves low distribution costs through: (1) dense store clusters (50-60 stores per area) with dedicated distribution centers, (2) all products routed through DCs (no direct delivery), (3) real-time sales analysis for short-term demand prediction enabling precise replenishment, and (4) consolidated deliveries reducing truck visits from 70/day in 1974 to 9/day in 2006. The micro-matching strategy aligns supply precisely with demand by location and time.">How does Seven-Eleven Japan achieve low distribution costs despite frequent deliveries?</li>
+    <li data-answer="A minimum wage (price floor) benefits workers overall when labor demand is inelastic (elasticity close to 0). In this case, the gain from higher wages (area A) exceeds the loss from reduced employment (area B), so net effect A - B is positive. Empirical evidence shows short-run labor demand elasticity is -0.28 (inelastic), meaning moderate minimum wage increases help workers. However, long-run elasticity is -1.5 (elastic), meaning over time employers adjust and job losses grow.">Under what conditions does a minimum wage benefit workers overall?</li>
+    <li data-answer="The 5 building blocks are: (1) Cost Object&mdash;anything for which we desire a cost measurement. (2) Direct Costs&mdash;costs that can be traced economically to the cost object. (3) Indirect Costs&mdash;costs that cannot be traced and must be allocated. (4) Cost Pool&mdash;a grouping of indirect cost items for allocation purposes. (5) Cost Allocation Base&mdash;a systematic link (cost driver) between indirect costs and cost objects.">What are the 5 building blocks of a costing system?</li>
+    <li data-answer="Normal costing uses budgeted overhead rates multiplied by actual activity, while actual costing uses actual rates multiplied by actual activity. Normal costing is preferred because: (1) it avoids cost fluctuations caused by seasonal variations or one-time events, (2) it enables timely costing since you don't need to wait until year-end for actual overhead figures, and (3) it provides more stable and predictable product costs for pricing and planning decisions.">Why is normal costing preferred over actual costing?</li>
+    <li data-answer="Xstrata could use several non-market strategies: (1) Direct lobbying&mdash;persuade the Australian government to modify the RSPT proposal. (2) Coalition building&mdash;ally with BHP, Rio Tinto and other mining companies for greater influence. (3) Geographic diversification&mdash;threaten to shift future investments to other countries. (4) Operational adjustment&mdash;suspend Australian operations to demonstrate economic impact. Key consideration: as a foreign multinational, Xstrata faces legitimacy concerns when intervening in domestic policy, so coalition with domestic companies is critical.">What non-market strategies could Xstrata use to address the Australian mining tax?</li>
+    <li data-answer="0.6 &times; 0.6 &times; 0.6 &times; 0.6 &times; 0.6 = 0.6^5 = 7.8%. This demonstrates why single-point NPV estimates are unreliable&mdash;even when each individual estimate has a reasonable 60% chance of being correct, the probability that ALL estimates are simultaneously correct is only 7.8%. This is the foundation of the Hertz risk analysis approach: use probability distributions instead of point estimates.">If each of 5 estimates has 60% probability of being correct, what's the combined probability?</li>
+    <li data-answer="Preattentive visual attributes are characteristics processed by the brain in less than 500 milliseconds without conscious effort. They include: color, size, shape, position, and orientation. They matter for data visualization because 83% of environmental perception comes through sight, and leveraging these attributes lets viewers instantly identify patterns, outliers, and trends in data without having to read or analyze individual data points.">What are preattentive visual attributes and why do they matter for data visualization?</li>
 </ol>
 
 <hr>
@@ -876,6 +888,35 @@
     Generated with Claude Code - January 25, 2026<br>
     To create PDF: Open in browser → Ctrl+P → Save as PDF
 </p>
+
+<div class="modal-overlay" id="qaModal">
+    <div class="modal-box">
+        <span class="modal-close" id="qaClose">&times;</span>
+        <h4 class="modal-question" id="qaQuestion"></h4>
+        <div class="modal-answer" id="qaAnswer"></div>
+    </div>
+</div>
+
+<script>
+(function() {
+    var modal = document.getElementById('qaModal');
+    var qEl = document.getElementById('qaQuestion');
+    var aEl = document.getElementById('qaAnswer');
+    var closeBtn = document.getElementById('qaClose');
+
+    document.querySelectorAll('.qa-list li').forEach(function(li) {
+        li.addEventListener('click', function() {
+            qEl.textContent = li.textContent;
+            aEl.textContent = li.getAttribute('data-answer');
+            modal.classList.add('active');
+        });
+    });
+
+    closeBtn.addEventListener('click', function() { modal.classList.remove('active'); });
+    modal.addEventListener('click', function(e) { if (e.target === modal) modal.classList.remove('active'); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') modal.classList.remove('active'); });
+})();
+</script>
 
 </body>
 </html>

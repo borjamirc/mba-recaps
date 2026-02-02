@@ -42,6 +42,18 @@
         .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
         .highlight { background: #fef3c7; padding: 2px 5px; border-radius: 3px; }
         .glossary td:first-child { font-weight: bold; width: 140px; background: #f7fafc; }
+        .cover a { color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.4); transition: border-bottom-color 0.2s; }
+        .cover a:hover { border-bottom-color: white; }
+        .qa-list li { cursor: pointer; padding: 6px 4px; border-radius: 5px; transition: background 0.2s; }
+        .qa-list li:hover { background: #ebf8ff; }
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center; }
+        .modal-overlay.active { display: flex; animation: fadeIn 0.2s ease; }
+        .modal-box { background: white; border-radius: 12px; padding: 30px; max-width: 650px; width: 90%; max-height: 80vh; overflow-y: auto; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+        .modal-close { position: absolute; top: 12px; right: 18px; font-size: 28px; cursor: pointer; color: #718096; line-height: 1; transition: color 0.2s; }
+        .modal-close:hover { color: #1a365d; }
+        .modal-question { color: #1a365d; font-size: 1.1em; margin-bottom: 15px; padding-right: 30px; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; }
+        .modal-answer { color: #4a5568; line-height: 1.7; font-size: 0.95em; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
 <body>
@@ -50,8 +62,8 @@
     <h1>MBA WEEKLY STUDY RECAP</h1>
     <p><strong>Week of January 12 - 18, 2026</strong></p>
     <p>11 Sessions | 8 Courses</p>
-    <p style="font-size: 0.9em; margin-top: 20px;">Data Analytics | Supply Chain | Corporate Finance | Managerial Accounting<br>
-    Managerial Economics | Career Accelerator | Leading People | Teambuilding</p>
+    <p style="font-size: 0.9em; margin-top: 20px;"><a href="#data-analytics">Data Analytics</a> | <a href="#supply-chain">Supply Chain</a> | <a href="#corporate-finance">Corporate Finance</a> | <a href="#managerial-accounting">Managerial Accounting</a><br>
+    <a href="#managerial-economics">Managerial Economics</a> | <a href="#career-accelerator">Career Accelerator</a> | <a href="#leading-people">Leading People</a> | <a href="#teambuilding">Teambuilding</a></p>
     <p style="margin-top: 25px; font-size: 0.85em; opacity: 0.9;">Generated: January 19, 2026</p>
 </div>
 
@@ -80,7 +92,7 @@
 <!-- CAREER ACCELERATOR II -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<h3 style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">CAREER ACCELERATOR II</h3>
+<h3 id="career-accelerator" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">CAREER ACCELERATOR II</h3>
 
 <div class="session-box">
     <div class="session-header">
@@ -145,7 +157,7 @@
 <!-- CORPORATE FINANCE -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<h3 style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">CORPORATE FINANCE</h3>
+<h3 id="corporate-finance" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">CORPORATE FINANCE</h3>
 
 <div class="session-box">
     <div class="session-header">
@@ -238,7 +250,7 @@
 <!-- DATA ANALYTICS FOR MANAGERS -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<h3 style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">DATA ANALYTICS FOR MANAGERS</h3>
+<h3 id="data-analytics" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">DATA ANALYTICS FOR MANAGERS</h3>
 
 <div class="session-box">
     <div class="session-header">
@@ -323,7 +335,7 @@
 <!-- HIGH-PERFORMANCE TEAMBUILDING II -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<h3 style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">HIGH-PERFORMANCE TEAMBUILDING II</h3>
+<h3 id="teambuilding" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">HIGH-PERFORMANCE TEAMBUILDING II</h3>
 
 <div class="session-box">
     <div class="session-header">
@@ -394,7 +406,7 @@
 <!-- LEADING PEOPLE & CHANGE -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<h3 style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">LEADING PEOPLE & CHANGE</h3>
+<h3 id="leading-people" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">LEADING PEOPLE & CHANGE</h3>
 
 <div class="session-box">
     <div class="session-header">
@@ -437,7 +449,7 @@
 <!-- MANAGERIAL ACCOUNTING -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<h3 style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">MANAGERIAL ACCOUNTING</h3>
+<h3 id="managerial-accounting" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">MANAGERIAL ACCOUNTING</h3>
 
 <div class="session-box">
     <div class="session-header">
@@ -561,7 +573,7 @@
 <!-- MANAGERIAL ECONOMICS -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<h3 style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">MANAGERIAL ECONOMICS</h3>
+<h3 id="managerial-economics" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">MANAGERIAL ECONOMICS</h3>
 
 <div class="session-box">
     <div class="session-header">
@@ -600,7 +612,7 @@
 <!-- SUPPLY CHAIN MANAGEMENT -->
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<h3 style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">SUPPLY CHAIN MANAGEMENT</h3>
+<h3 id="supply-chain" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">SUPPLY CHAIN MANAGEMENT</h3>
 
 <div class="session-box">
     <div class="session-header">
@@ -767,21 +779,21 @@
 
 <h2>SELF-ASSESSMENT QUESTIONS</h2>
 
-<ol>
-    <li>What does it mean when regression residuals show a pattern?</li>
-    <li>Name the 4 causes of the bullwhip effect and one solution for each.</li>
-    <li>Why did Agua Clara choose Marbella despite Torremolinos having higher IRR?</li>
-    <li>Write the WACC formula and explain each component.</li>
-    <li>What is omitted variable bias and how do you fix it?</li>
-    <li>What are the 3 management activities in managerial accounting?</li>
-    <li>Explain the difference between variable and fixed costs. How does unit cost behave differently for each?</li>
-    <li>What is a cost driver and why is it important for indirect cost allocation?</li>
-    <li>What is the difference between inventoriable and period costs?</li>
-    <li>Explain the PDI feedback model - what do P, D, and I stand for?</li>
-    <li>What are the three common defensive reactions to feedback?</li>
-    <li>What is Radical Candor and how does it differ from Ruinous Empathy?</li>
-    <li>How does Southwest Airlines achieve 10-minute turnarounds? What is relational coordination?</li>
-    <li>What's the XYZ technique for CV bullet points?</li>
+<ol class="qa-list">
+    <li data-answer="When residuals show a pattern (e.g., a curve or systematic trend), it means the linear model is not capturing the true relationship in the data. The model's assumptions are violated&mdash;residuals should be randomly distributed around zero. A pattern indicates a non-linear relationship exists, and you should try a non-linear model (e.g., hyperbolic, logarithmic, or polynomial) to better fit the data.">What does it mean when regression residuals show a pattern?</li>
+    <li data-answer="(1) Demand Forecast Updating&mdash;each stage re-forecasts; solution: share POS data via EDI. (2) Order Batching&mdash;bulk ordering increases variability; solution: smaller, more frequent orders. (3) Price Fluctuations&mdash;promotions cause forward buying; solution: EDLP (Everyday Low Pricing). (4) Rationing &amp; Shortage Gaming&mdash;exaggerated orders during shortages; solution: allocate based on past sales history.">Name the 4 causes of the bullwhip effect and one solution for each.</li>
+    <li data-answer="Despite Torremolinos having a higher IRR (40.6% vs 24.8%), Agua Clara chose Marbella because: (1) Marbella had higher NPV (&euro;27m vs &euro;14.7m), and NPV is the better decision criterion for mutually exclusive projects. (2) Even after risk adjustment (~25% premium, ~18.6% discount rate), Marbella's NPV remained higher. (3) Marbella was a development project with learning curve benefits. (4) The remaining &euro;42m had poor alternative investments. IRR can be misleading when comparing projects of different sizes.">Why did Agua Clara choose Marbella despite Torremolinos having higher IRR?</li>
+    <li data-answer="WACC = wd &times; Kd &times; (1-t) + we &times; Ke. Where: wd = weight of debt (market value), Kd = cost of debt (YTM), t = tax rate (debt provides tax shield), we = weight of equity (market value), Ke = cost of equity (from CAPM: Rf + &beta; &times; ERP). WACC represents the minimum return a company must earn on its investments to satisfy all capital providers. The goal is to find the debt/equity mix that minimizes WACC, thereby maximizing firm value.">Write the WACC formula and explain each component.</li>
+    <li data-answer="Omitted variable bias occurs when a relevant variable that affects both the dependent and independent variable is left out of the regression. Classic example: ice cream sales appear positively correlated with price because both are driven by temperature (summer). Without controlling for temperature, the regression falsely suggests higher prices increase demand. Fix: include all relevant demand shifters as control variables in the regression model (Q = &beta;0 + &beta;1P + &beta;2Temperature + ...).">What is omitted variable bias and how do you fix it?</li>
+    <li data-answer="The three management activities are: (1) Planning&mdash;setting goals, objectives, and budgets for the organization. (2) Control&mdash;monitoring actual performance against the plan, identifying variances, and taking corrective action. (3) Decision-Making&mdash;choosing between alternatives using cost and benefit information. Managerial accounting provides the information needed for all three activities.">What are the 3 management activities in managerial accounting?</li>
+    <li data-answer="Variable costs: total changes proportionally with output, but per-unit cost stays constant (e.g., direct materials at &pound;75/guest). Fixed costs: total stays the same regardless of output, but per-unit cost decreases as volume increases (e.g., &pound;14,000 rent spread over more units). Key caveat: use unit costs cautiously! Since fixed costs per unit change with volume, base decisions on total dollars, not unit costs.">Explain the difference between variable and fixed costs. How does unit cost behave differently for each?</li>
+    <li data-answer="A cost driver is any activity or factor that causes costs to be incurred (cause &amp; effect relationship). It's important for indirect cost allocation because indirect costs cannot be traced directly to cost objects&mdash;they must be allocated using a systematic link. The cost driver serves as that link (the cost allocation base). For example, machine hours might drive maintenance costs, so maintenance is allocated based on machine hours used by each product.">What is a cost driver and why is it important for indirect cost allocation?</li>
+    <li data-answer="Inventoriable costs (product costs) are assigned to inventory and expensed only when the product is sold (appearing in COGS). They include direct materials, direct labor, and manufacturing overhead. Period costs are expensed in the period they are incurred regardless of sales, appearing on the income statement as operating expenses. They include selling, general &amp; administrative costs. The distinction determines timing of expense recognition.">What is the difference between inventoriable and period costs?</li>
+    <li data-answer="PDI stands for: P = Point of View&mdash;advocate your position with confidence, curiosity, and caring; be humble and tell it as a story, not a fact. D = Data&mdash;always provide facts, KPIs, impact, and outcomes ('I noticed that you said/did...'). I = Inquiry&mdash;test your point of view by asking the other person's perspective ('How do you see it? Does this make sense to you?'). This framework ensures feedback is specific, evidence-based, and opens dialogue.">Explain the PDI feedback model - what do P, D, and I stand for?</li>
+    <li data-answer="The three common defensive reactions to feedback are: (1) Denial&mdash;including rationalization, justification, and self-focus (explaining away the feedback). (2) Attack (Fight)&mdash;including confrontation, attempts to control the situation, and sabotage. (3) Avoidance (Flight)&mdash;including avoidance, indifference, deflection, and surrender. Recognizing these reactions in yourself and others is key to giving and receiving feedback effectively.">What are the three common defensive reactions to feedback?</li>
+    <li data-answer="Radical Candor is feedback that simultaneously challenges the problem directly while genuinely caring for the person. It sits in the quadrant of 'Care for Person' + 'Challenge Problem.' Ruinous Empathy is when you care for the person but fail to challenge the problem&mdash;you avoid giving honest feedback to spare feelings, which ultimately harms them by allowing issues to persist. The key difference: Radical Candor addresses problems head-on; Ruinous Empathy avoids them out of misplaced kindness.">What is Radical Candor and how does it differ from Ruinous Empathy?</li>
+    <li data-answer="Southwest achieves 10-minute turnarounds through relational coordination, not technology. Relational coordination means communication and relationships that enable task integration, built on: shared goals, shared knowledge, and mutual respect, producing frequent, timely, accurate, problem-solving communication. Frontline employees are empowered to solve problems without escalation. This is supported by HR practices: hiring for attitude (2% acceptance rate), extensive cross-training, no-layoffs policy, profit sharing, and cooperative union relationships.">How does Southwest Airlines achieve 10-minute turnarounds? What is relational coordination?</li>
+    <li data-answer="The XYZ technique structures CV bullet points as: 'Accomplished [X] as measured by [Y], by doing [Z].' Example: 'Increased sales revenue by 25% ($2M) by implementing new CRM system and training 15 sales reps.' X = the achievement, Y = the quantifiable metric, Z = the specific actions taken. This format demonstrates impact with measurable results and shows how you achieved them.">What's the XYZ technique for CV bullet points?</li>
 </ol>
 
 <hr>
@@ -789,6 +801,35 @@
     Generated with Claude Code - January 19, 2026<br>
     To create PDF: Open in browser → Ctrl+P → Save as PDF
 </p>
+
+<div class="modal-overlay" id="qaModal">
+    <div class="modal-box">
+        <span class="modal-close" id="qaClose">&times;</span>
+        <h4 class="modal-question" id="qaQuestion"></h4>
+        <div class="modal-answer" id="qaAnswer"></div>
+    </div>
+</div>
+
+<script>
+(function() {
+    var modal = document.getElementById('qaModal');
+    var qEl = document.getElementById('qaQuestion');
+    var aEl = document.getElementById('qaAnswer');
+    var closeBtn = document.getElementById('qaClose');
+
+    document.querySelectorAll('.qa-list li').forEach(function(li) {
+        li.addEventListener('click', function() {
+            qEl.textContent = li.textContent;
+            aEl.textContent = li.getAttribute('data-answer');
+            modal.classList.add('active');
+        });
+    });
+
+    closeBtn.addEventListener('click', function() { modal.classList.remove('active'); });
+    modal.addEventListener('click', function(e) { if (e.target === modal) modal.classList.remove('active'); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') modal.classList.remove('active'); });
+})();
+</script>
 
 </body>
 </html>
