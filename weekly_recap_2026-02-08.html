@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBA Weekly Study Recap - Week of Feb 2-8, 2026</title>
+    <style>
+        @media print {
+            .page-break { page-break-before: always; }
+            body { font-size: 11pt; }
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 { color: #1a365d; border-bottom: 3px solid #1a365d; padding-bottom: 10px; }
+        h2 { color: #2c5282; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; margin-top: 30px; }
+        h3 { color: #2d3748; background: #f7fafc; padding: 10px; border-left: 4px solid #4299e1; margin-top: 25px; }
+        h4 { color: #4a5568; margin-top: 15px; margin-bottom: 8px; }
+        table { border-collapse: collapse; width: 100%; margin: 15px 0; font-size: 0.95em; }
+        th, td { border: 1px solid #e2e8f0; padding: 8px 10px; text-align: left; }
+        th { background: #edf2f7; }
+        .cover { text-align: center; padding: 50px 20px; background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%); color: white; margin-bottom: 30px; border-radius: 8px; }
+        .cover h1 { color: white; border: none; font-size: 2.2em; margin-bottom: 10px; }
+        .cover p { font-size: 1.1em; margin: 8px 0; }
+        .session-box { background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin: 20px 0; }
+        .session-header { background: #2c5282; color: white; padding: 12px 15px; margin: -20px -20px 15px -20px; border-radius: 8px 8px 0 0; }
+        .session-header strong { font-size: 1.1em; }
+        .key-concept { background: #ebf8ff; padding: 12px; border-radius: 5px; margin: 10px 0; }
+        .formula { background: #faf5ff; padding: 12px; border-radius: 5px; font-family: 'Courier New', monospace; margin: 10px 0; font-size: 0.95em; }
+        .case-box { background: #fffaf0; padding: 12px; border-radius: 5px; border-left: 4px solid #ed8936; margin: 10px 0; }
+        .deadline { background: #fed7d7; padding: 10px 12px; border-radius: 5px; margin: 8px 0; border-left: 4px solid #c53030; }
+        .upcoming { background: #c6f6d5; padding: 10px 12px; border-radius: 5px; margin: 8px 0; border-left: 4px solid #38a169; }
+        .prep-item { background: #e9d8fd; padding: 8px 12px; border-radius: 5px; margin: 5px 0; display: inline-block; }
+        .prep-item a { color: #553c9a; text-decoration: none; }
+        .prep-item a:hover { text-decoration: underline; }
+        ul { padding-left: 20px; margin: 8px 0; }
+        li { margin: 4px 0; }
+        ol { padding-left: 20px; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .highlight { background: #fef3c7; padding: 2px 5px; border-radius: 3px; }
+        .glossary td:first-child { font-weight: bold; width: 140px; background: #f7fafc; }
+        .cover a { color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.4); transition: border-bottom-color 0.2s; }
+        .cover a:hover { border-bottom-color: white; }
+        .qa-list li { cursor: pointer; padding: 6px 4px; border-radius: 5px; transition: background 0.2s; }
+        .qa-list li:hover { background: #ebf8ff; }
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center; }
+        .modal-overlay.active { display: flex; animation: fadeIn 0.2s ease; }
+        .modal-box { background: white; border-radius: 12px; padding: 30px; max-width: 650px; width: 90%; max-height: 80vh; overflow-y: auto; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+        .modal-close { position: absolute; top: 12px; right: 18px; font-size: 28px; cursor: pointer; color: #718096; line-height: 1; transition: color 0.2s; }
+        .modal-close:hover { color: #1a365d; }
+        .modal-question { color: #1a365d; font-size: 1.1em; margin-bottom: 15px; padding-right: 30px; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; }
+        .modal-answer { color: #4a5568; line-height: 1.7; font-size: 0.95em; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .followup-questions { background: #f0fff4; padding: 15px; border-radius: 5px; margin: 15px 0; border-left: 4px solid #48bb78; }
+        .followup-questions h5 { color: #276749; margin: 0 0 10px 0; }
+    </style>
+</head>
+<body>
+
+<div class="cover">
+    <h1>MBA WEEKLY STUDY RECAP</h1>
+    <p><strong>Week of February 2 - 8, 2026</strong></p>
+    <p>14 Sessions | 9 Courses</p>
+    <p style="font-size: 0.9em; margin-top: 20px;">
+        <a href="#data-analytics">Data Analytics</a> |
+        <a href="#project-management">Project Management</a> |
+        <a href="#managerial-economics">Managerial Economics</a> |
+        <a href="#data-fluency">Data Fluency</a> |
+        <a href="#bgs">BGS</a> |
+        <a href="#managerial-accounting">Managerial Accounting</a> |
+        <a href="#leading-people">Leading People</a> |
+        <a href="#supply-chain">Supply Chain</a> |
+        <a href="#corporate-finance">Corporate Finance</a>
+    </p>
+    <p style="margin-top: 25px; font-size: 0.85em; opacity: 0.9;">Generated: February 8, 2026</p>
+</div>
+
+<h2>WEEK AT A GLANCE</h2>
+<table>
+    <tr><th>Date</th><th>Course</th><th>Session</th><th>Key Topic</th></tr>
+    <tr><td>Feb 2</td><td>ISA - Project Management</td><td>2-3</td><td>Agile Project Management</td></tr>
+    <tr><td>Feb 2</td><td>Data Analytics</td><td>7</td><td>Risk Analysis Practice</td></tr>
+    <tr><td>Feb 3</td><td>Managerial Economics</td><td>6</td><td>Carbon Pricing & Environmental Policy</td></tr>
+    <tr><td>Feb 3</td><td>ISA - Data Fluency</td><td>5-6</td><td>Advanced Data Analysis</td></tr>
+    <tr><td>Feb 4</td><td>BGS</td><td>8</td><td>Corporate Social Responsibility</td></tr>
+    <tr><td>Feb 4</td><td>Data Analytics</td><td>8</td><td>Risk Analysis Workshop</td></tr>
+    <tr><td>Feb 4</td><td>Career Accelerator II</td><td>4</td><td>Professional Development</td></tr>
+    <tr><td>Feb 5</td><td>Managerial Accounting</td><td>7</td><td>Activity-Based Costing</td></tr>
+    <tr><td>Feb 5</td><td>Leading People & Change</td><td>5</td><td>Recruiting and Selecting Employees</td></tr>
+    <tr><td>Feb 6</td><td>Managerial Economics</td><td>7</td><td>Market Regulation</td></tr>
+    <tr><td>Feb 6</td><td>Supply Chain Management</td><td>6</td><td>SC Risks & Resilience</td></tr>
+    <tr><td>Feb 6</td><td>Corporate Finance</td><td>8</td><td>Free Cash Flows</td></tr>
+    <tr><td>Feb 6</td><td>Finance Interview Prep</td><td>1</td><td>Finance Career Preparation</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<!-- DATA ANALYTICS -->
+<h3 id="data-analytics" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">DATA ANALYTICS FOR MANAGERS</h3>
+
+<div class="session-box">
+    <div class="session-header">
+        <strong>Data Analytics - Sessions 7 & 8</strong><br>
+        Feb 2 & 4 | Risk Analysis Practice Workshops
+    </div>
+
+    <h4>KEY CONCEPTS</h4>
+    <div class="key-concept">
+        <ul>
+            <li><strong>Monte Carlo Simulation:</strong> Technique for understanding impact of risk and uncertainty using random sampling to generate probability distributions of outcomes</li>
+            <li><strong>@Risk Software:</strong> Excel add-in for risk analysis using Monte Carlo simulation - essential tool for quantitative risk assessment</li>
+            <li><strong>Sensitivity Analysis:</strong> Identifying which input variables have the greatest impact on output uncertainty</li>
+            <li><strong>Risk Metrics:</strong> VaR (Value at Risk), expected value, standard deviation of outcomes</li>
+        </ul>
+    </div>
+
+    <h4>KEY FORMULAS</h4>
+    <div class="formula">
+        <strong>Expected Value:</strong> E[X] = Sum of (probability x outcome)<br><br>
+        <strong>Standard Deviation:</strong> Measures spread of possible outcomes around expected value<br><br>
+        <strong>Coefficient of Variation:</strong> CV = Standard Deviation / Mean (for comparing relative risk)
+    </div>
+
+    <h4>PRACTICAL APPLICATION</h4>
+    <div class="case-box">
+        <strong>Risk Analysis Workshop</strong><br>
+        <strong>Focus:</strong> Using @Risk to model uncertainty in business decisions<br>
+        <strong>Key Steps:</strong> Define distributions for uncertain inputs, run simulations, interpret tornado charts and sensitivity analysis
+    </div>
+
+    <div class="followup-questions">
+        <h5>Follow-up Questions for Self-Assessment</h5>
+        <ol class="qa-list">
+            <li data-answer="Monte Carlo simulation uses random sampling to generate thousands of possible scenarios based on probability distributions for uncertain inputs. Unlike deterministic analysis which gives a single answer, it produces a distribution of outcomes showing the range and likelihood of different results, allowing for better risk assessment.">How does Monte Carlo simulation differ from traditional deterministic analysis in evaluating project risk?</li>
+            <li data-answer="A tornado chart ranks input variables by their impact on output variance. Variables at the top have the highest correlation with output uncertainty. This helps managers focus risk mitigation efforts on the factors that matter most to project success.">What does a tornado chart tell us about the relative importance of different risk factors?</li>
+        </ol>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- PROJECT MANAGEMENT -->
+<h3 id="project-management" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">ISA - PROJECT MANAGEMENT</h3>
+
+<div class="session-box">
+    <div class="session-header">
+        <strong>Project Management - Sessions 2-3</strong><br>
+        Feb 2 | Agile Project Management
+    </div>
+
+    <h4>KEY CONCEPTS</h4>
+    <div class="key-concept">
+        <ul>
+            <li><strong>Project Definition:</strong> Temporary endeavor undertaken to create a unique product, service, or result - has defined start/end, constraints, and multiple stakeholders</li>
+            <li><strong>Agile vs. Classic PM:</strong> Agile for uncertain solution designs (creativity priority); Classic for uncertain solution details (efficiency priority)</li>
+            <li><strong>Scrum Framework:</strong> Product Owner (deliverable), Scrum Master (process), Development Team (cross-functional)</li>
+            <li><strong>Sprint:</strong> Fixed time-box (typically 1-2 weeks) for completing a set of user stories</li>
+        </ul>
+    </div>
+
+    <h4>KEY FRAMEWORKS</h4>
+    <div class="two-col">
+        <div>
+            <strong>Agile Manifesto Values</strong>
+            <ul>
+                <li>People over processes and tools</li>
+                <li>Responsiveness over planning</li>
+                <li>Collaboration over negotiation</li>
+                <li>Deliverables over documentation</li>
+            </ul>
+        </div>
+        <div>
+            <strong>Classic PM Characteristics</strong>
+            <ul>
+                <li>Software tools crucial for success</li>
+                <li>Planning for efficient resource use</li>
+                <li>Fixed-price contracts need budgeting</li>
+                <li>Reporting for progress monitoring</li>
+            </ul>
+        </div>
+    </div>
+
+    <h4>EFFORT ESTIMATION (STORY POINTS)</h4>
+    <div class="formula">
+        <table>
+            <tr><th>T-shirt Size</th><th>Meaning</th><th>Story Points</th></tr>
+            <tr><td>S</td><td>Two stories per team member per sprint</td><td>1</td></tr>
+            <tr><td>M</td><td>One story per team member per sprint</td><td>2</td></tr>
+            <tr><td>L</td><td>One story per two team members per sprint</td><td>4</td></tr>
+        </table>
+    </div>
+
+    <div class="followup-questions">
+        <h5>Follow-up Questions for Self-Assessment</h5>
+        <ol class="qa-list">
+            <li data-answer="Use Agile when the solution design itself is uncertain and creativity is the priority. Use Classic PM when you know what to build but need to manage details and resources efficiently. Agile suits innovation and changing requirements; Classic suits well-defined projects with fixed scope.">When should you choose Agile over Classic project management, and vice versa?</li>
+            <li data-answer="The Product Owner defines and communicates product vision, manages the backlog, and represents customer needs. The Scrum Master facilitates Scrum events, coaches the team, removes impediments, and ensures process adherence. Neither is a traditional 'manager' - they serve the team.">What are the distinct responsibilities of the Product Owner vs. Scrum Master?</li>
+        </ol>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- MANAGERIAL ECONOMICS -->
+<h3 id="managerial-economics" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">MANAGERIAL ECONOMICS</h3>
+
+<div class="session-box">
+    <div class="session-header">
+        <strong>Managerial Economics - Sessions 6 & 7</strong><br>
+        Feb 3 & 6 | Carbon Pricing & Environmental Policy
+    </div>
+
+    <h4>KEY CONCEPTS</h4>
+    <div class="key-concept">
+        <ul>
+            <li><strong>Carbon Tax:</strong> Price per ton of CO2 emissions - internalizes the externality of pollution, making emitters pay for environmental costs</li>
+            <li><strong>Cap-and-Trade:</strong> Sets quantitative emission limits (cap) and allows trading of permits - price varies based on market</li>
+            <li><strong>Cooperative Federalism:</strong> Federal government sets floor standards; states/provinces choose implementation - Canada's approach</li>
+            <li><strong>Output-Based Pricing System (OBPS):</strong> Only charges for emissions exceeding industry benchmarks - prevents carbon leakage</li>
+        </ul>
+    </div>
+
+    <div class="case-box">
+        <strong>CASE: Canada's Federalist Carbon Tax</strong><br>
+        <strong>Context:</strong> Trudeau's 2015 campaign promised carbon pricing; law passed 2018<br>
+        <strong>Design:</strong> Provinces can design own systems meeting federal floor OR adopt federal backstop<br>
+        <strong>Revenue:</strong> Stays in province - 80% of households get more back in rebates than they pay<br>
+        <strong>Price Path:</strong> CA$10/ton (2018) rising to CA$170/ton by 2030<br>
+        <strong>Key Insight:</strong> <span class="highlight">Political success came from letting provinces keep revenue and choose implementation</span>
+    </div>
+
+    <h4>POLICY DESIGN LESSONS</h4>
+    <div class="key-concept">
+        <ul>
+            <li><strong>Lesson 1:</strong> Set floor, let jurisdictions decide implementation details</li>
+            <li><strong>Lesson 2:</strong> Keep revenue local to avoid "tax grab" perception</li>
+            <li><strong>Lesson 3:</strong> Emphasize benefits (rebates) over costs (taxes)</li>
+            <li><strong>Lesson 4:</strong> Industrial pricing may be easier than consumer fuel taxes</li>
+        </ul>
+    </div>
+
+    <div class="followup-questions">
+        <h5>Follow-up Questions for Self-Assessment</h5>
+        <ol class="qa-list">
+            <li data-answer="A carbon tax sets a known price but uncertain emission reduction quantity. Cap-and-trade sets a known quantity cap but the price fluctuates based on market conditions. Carbon tax provides price certainty for business planning; cap-and-trade guarantees environmental outcomes.">What is the fundamental difference between a carbon tax and cap-and-trade system?</li>
+            <li data-answer="Output-based pricing only charges for emissions above an industry-specific benchmark. This means efficient facilities pay less (or nothing), while inefficient ones pay more. It prevents 'carbon leakage' - companies moving operations to jurisdictions without carbon pricing - by not penalizing industries simply for existing.">How does output-based pricing prevent carbon leakage?</li>
+        </ol>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- DATA FLUENCY -->
+<h3 id="data-fluency" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">ISA - DATA FLUENCY</h3>
+
+<div class="session-box">
+    <div class="session-header">
+        <strong>Data Fluency - Sessions 5-6</strong><br>
+        Feb 3 | Advanced Data Analysis Techniques
+    </div>
+
+    <h4>KEY CONCEPTS</h4>
+    <div class="key-concept">
+        <ul>
+            <li><strong>Data Visualization Best Practices:</strong> Choose chart types appropriate for data relationships; avoid chartjunk</li>
+            <li><strong>Statistical Inference:</strong> Drawing conclusions about populations from sample data</li>
+            <li><strong>Correlation vs. Causation:</strong> Statistical relationships don't prove causal relationships</li>
+            <li><strong>Data-Driven Decision Making:</strong> Using quantitative evidence to inform business decisions</li>
+        </ul>
+    </div>
+
+    <div class="followup-questions">
+        <h5>Follow-up Questions for Self-Assessment</h5>
+        <ol class="qa-list">
+            <li data-answer="Correlation shows that two variables move together, but doesn't prove one causes the other. A third variable might cause both (confounding), or the relationship might be coincidental. Establishing causation requires controlled experiments, temporal precedence, and ruling out alternative explanations.">Why is it important to distinguish between correlation and causation in business analytics?</li>
+        </ol>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- BGS -->
+<h3 id="bgs" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">BUSINESS, GOVERNMENT & SUSTAINABILITY</h3>
+
+<div class="session-box">
+    <div class="session-header">
+        <strong>BGS - Session 8</strong><br>
+        Feb 4 | Corporate Social Responsibility & Creating Shared Value
+    </div>
+
+    <h4>KEY CONCEPTS</h4>
+    <div class="key-concept">
+        <ul>
+            <li><strong>Shared Value:</strong> Policies and practices that enhance competitiveness while advancing economic and social conditions in communities - NOT charity or CSR</li>
+            <li><strong>CSR vs. CSV:</strong> CSR is peripheral/discretionary; CSV is integral to profitability and competitive positioning</li>
+            <li><strong>Three Ways to Create Shared Value:</strong>
+                <ol>
+                    <li>Reconceiving products and markets (meeting societal needs)</li>
+                    <li>Redefining productivity in the value chain (resource efficiency, employee wellness)</li>
+                    <li>Enabling local cluster development (supplier capability, infrastructure)</li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+
+    <div class="case-box">
+        <strong>CASE: Creating Shared Value (Porter & Kramer)</strong><br>
+        <strong>Core Argument:</strong> Capitalism is under siege because companies optimize short-term profits while ignoring societal needs<br>
+        <strong>Solution:</strong> Redefine corporate purpose around creating shared value - economic value through societal value<br>
+        <strong>Examples:</strong>
+        <ul>
+            <li><strong>Nestlé Nespresso:</strong> Improved coffee farmer productivity by 300%+ through better practices, securing supply while increasing farmer incomes</li>
+            <li><strong>Johnson & Johnson:</strong> Saved $250M on healthcare costs through employee wellness programs</li>
+            <li><strong>Walmart:</strong> Cut 100M miles from truck routes, saved $200M AND reduced emissions</li>
+        </ul>
+    </div>
+
+    <h4>KEY INSIGHT</h4>
+    <p>The concept of shared value recognizes that <span class="highlight">societal needs, not just conventional economic needs, define markets</span>. Social harms create internal costs for firms - pollution wastes resources, poor employee health reduces productivity, weak suppliers threaten quality.</p>
+
+    <div class="followup-questions">
+        <h5>Follow-up Questions for Self-Assessment</h5>
+        <ol class="qa-list">
+            <li data-answer="CSR is typically peripheral to business strategy, driven by external pressure, and involves discretionary spending. CSV is integral to core business strategy, self-interested, and leverages company resources to create economic value by addressing societal needs. CSR is about 'doing good'; CSV is about 'doing well by doing good'.">How does Creating Shared Value (CSV) differ from traditional Corporate Social Responsibility (CSR)?</li>
+            <li data-answer="Reconceiving products and markets: design products addressing societal needs (healthier food, financial inclusion). Redefining productivity: improve resource efficiency, employee health, supplier capability. Enabling clusters: develop local infrastructure, training, and supporting industries that benefit all participants.">What are the three main ways companies can create shared value according to Porter and Kramer?</li>
+            <li data-answer="Fair trade primarily redistributes existing value by paying higher prices for the same crops. Shared value expands total value by improving farmer productivity, yields, and quality - creating bigger profits for both farmers AND companies. Fair trade might increase income 10-20%; shared value investments can increase it 300%+.">Why might shared value investments be more impactful than fair trade approaches?</li>
+        </ol>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- MANAGERIAL ACCOUNTING -->
+<h3 id="managerial-accounting" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">MANAGERIAL ACCOUNTING</h3>
+
+<div class="session-box">
+    <div class="session-header">
+        <strong>Managerial Accounting - Session 7</strong><br>
+        Feb 5 | Activity-Based Costing
+    </div>
+
+    <h4>KEY CONCEPTS</h4>
+    <div class="key-concept">
+        <ul>
+            <li><strong>Activity-Based Costing (ABC):</strong> Assigns overhead costs based on activities that drive costs, not just volume measures</li>
+            <li><strong>Cost Drivers:</strong> Factors that cause costs to be incurred (machine setups, inspections, purchase orders)</li>
+            <li><strong>Traditional vs. ABC:</strong> Traditional uses volume-based allocation (labor hours, machine hours); ABC uses multiple activity-based drivers</li>
+            <li><strong>Cost Pool:</strong> Grouping of individual costs associated with an activity</li>
+        </ul>
+    </div>
+
+    <h4>KEY FORMULAS</h4>
+    <div class="formula">
+        <strong>Activity Rate:</strong> Total Activity Cost Pool / Total Activity Driver Units<br><br>
+        <strong>Cost Assignment:</strong> Activity Rate x Activity Driver Units Used<br><br>
+        <strong>Total Product Cost (ABC):</strong> Direct Materials + Direct Labor + Sum of (Activity Rate x Activity Driver Units)
+    </div>
+
+    <div class="followup-questions">
+        <h5>Follow-up Questions for Self-Assessment</h5>
+        <ol class="qa-list">
+            <li data-answer="Traditional costing allocates all overhead based on a single volume measure (like labor hours), which can distort costs when products use resources differently. ABC traces costs to activities, then to products based on their actual consumption of those activities, providing more accurate product costs for pricing and profitability analysis.">What problem does Activity-Based Costing solve that traditional costing methods cannot?</li>
+            <li data-answer="ABC typically reveals that low-volume, complex products are more expensive than traditional costing suggests, while high-volume, simple products are cheaper. This happens because complex products consume more non-volume-based activities (setups, special handling) that traditional costing spreads evenly across all products.">How might implementing ABC change a company's view of product profitability?</li>
+        </ol>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- LEADING PEOPLE -->
+<h3 id="leading-people" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">LEADING PEOPLE & CHANGE</h3>
+
+<div class="session-box">
+    <div class="session-header">
+        <strong>Leading People - Session 5</strong><br>
+        Feb 5 | Recruiting and Selecting Employees
+    </div>
+
+    <h4>KEY CONCEPTS</h4>
+    <div class="key-concept">
+        <ul>
+            <li><strong>Strategic Recruiting:</strong> Recruitment strategy should align with business strategy and organizational culture</li>
+            <li><strong>Structured vs. Unstructured Interviews:</strong> Structured interviews (same questions, scoring rubric) are more predictive of job performance</li>
+            <li><strong>Selection Criteria:</strong> Balance between technical skills, cultural fit, and growth potential</li>
+            <li><strong>Bias in Hiring:</strong> Unconscious biases affect hiring decisions; structured processes help mitigate</li>
+        </ul>
+    </div>
+
+    <div class="case-box">
+        <strong>CASE: SG Cowen - New Recruits</strong><br>
+        <strong>Context:</strong> Investment bank making final hiring decisions from recruiting process<br>
+        <strong>Dilemma:</strong> Evaluating candidates with different strengths - prestigious schools vs. relevant experience, conventional profiles vs. unique backgrounds<br>
+        <strong>Key Insight:</strong> <span class="highlight">Hiring decisions reveal organizational values and shape future culture</span>
+    </div>
+
+    <h4>RECRUITMENT FRAMEWORK</h4>
+    <div class="key-concept">
+        <ul>
+            <li><strong>Define the role:</strong> Job requirements, success metrics, required competencies</li>
+            <li><strong>Source candidates:</strong> Where to find talent that fits organizational needs</li>
+            <li><strong>Screen and assess:</strong> Structured evaluation against defined criteria</li>
+            <li><strong>Decide and close:</strong> Make offers that reflect candidate value and market conditions</li>
+        </ul>
+    </div>
+
+    <div class="followup-questions">
+        <h5>Follow-up Questions for Self-Assessment</h5>
+        <ol class="qa-list">
+            <li data-answer="Structured interviews ask all candidates the same questions in the same order, with predetermined scoring criteria. Research shows they are significantly more predictive of job performance because they reduce interviewer bias, ensure relevant job-related questions, and enable fair comparison across candidates.">Why are structured interviews more effective predictors of job performance than unstructured conversations?</li>
+            <li data-answer="Hire for cultural fit when: the role requires extensive collaboration, company culture is a competitive advantage, turnover costs are high. Hire for diversity of thought when: innovation is critical, the team lacks needed perspectives, or existing culture has blind spots. The key is ensuring 'fit' means shared values, not demographic similarity.">When should a company prioritize cultural fit versus diversity of thought in hiring decisions?</li>
+        </ol>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- SUPPLY CHAIN -->
+<h3 id="supply-chain" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">SUPPLY CHAIN MANAGEMENT</h3>
+
+<div class="session-box">
+    <div class="session-header">
+        <strong>Supply Chain Management - Session 6</strong><br>
+        Feb 6 | SC Risks & Resilience
+    </div>
+
+    <h4>KEY CONCEPTS</h4>
+    <div class="key-concept">
+        <ul>
+            <li><strong>Supply Chain Risk Categories:</strong>
+                <ul>
+                    <li><strong>Operational:</strong> Equipment failure, quality issues, labor disruptions</li>
+                    <li><strong>Financial:</strong> Supplier bankruptcy, currency fluctuations</li>
+                    <li><strong>Strategic:</strong> Technology changes, market shifts, competitive moves</li>
+                    <li><strong>Hazard:</strong> Natural disasters, pandemics, geopolitical events</li>
+                </ul>
+            </li>
+            <li><strong>Resilience:</strong> Ability to anticipate, prepare for, respond to, and adapt to disruptions</li>
+            <li><strong>Redundancy vs. Flexibility:</strong> Redundancy = backup capacity; Flexibility = ability to reconfigure quickly</li>
+        </ul>
+    </div>
+
+    <h4>RISK MITIGATION STRATEGIES</h4>
+    <div class="two-col">
+        <div>
+            <strong>Proactive (Before disruption)</strong>
+            <ul>
+                <li>Supplier diversification</li>
+                <li>Safety stock / buffer inventory</li>
+                <li>Dual sourcing strategies</li>
+                <li>Risk mapping and monitoring</li>
+            </ul>
+        </div>
+        <div>
+            <strong>Reactive (During/After)</strong>
+            <ul>
+                <li>Emergency procurement</li>
+                <li>Demand shifting/rationing</li>
+                <li>Expedited shipping</li>
+                <li>Production rescheduling</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="followup-questions">
+        <h5>Follow-up Questions for Self-Assessment</h5>
+        <ol class="qa-list">
+            <li data-answer="There's a fundamental tradeoff: lean supply chains optimize for efficiency and cost but are vulnerable to disruptions. Resilient supply chains have redundancy and flexibility but cost more. The goal is finding the right balance based on risk exposure, cost of disruption, and competitive requirements - not maximizing either extreme.">What is the tradeoff between supply chain efficiency and resilience?</li>
+            <li data-answer="Redundancy provides backup capacity (extra inventory, alternate suppliers) that can substitute when primary sources fail. Flexibility enables rapid reconfiguration (multi-skilled workers, modular production). Redundancy has higher holding costs but faster response; flexibility requires capability investment but is more adaptable to unexpected scenarios.">How do redundancy and flexibility differ as resilience strategies?</li>
+        </ol>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- CORPORATE FINANCE -->
+<h3 id="corporate-finance" style="background: #1a365d; color: white; padding: 10px 15px; margin-top: 25px;">CORPORATE FINANCE</h3>
+
+<div class="session-box">
+    <div class="session-header">
+        <strong>Corporate Finance - Session 8</strong><br>
+        Feb 6 | Free Cash Flows
+    </div>
+
+    <h4>KEY CONCEPTS</h4>
+    <div class="key-concept">
+        <ul>
+            <li><strong>Free Cash Flow (FCF):</strong> Cash available to all capital providers after operating expenses and investments</li>
+            <li><strong>Relevant Cash Flows:</strong> Only incremental, after-tax cash flows matter for investment decisions</li>
+            <li><strong>Sunk Costs:</strong> Past expenditures that cannot be recovered - EXCLUDE from analysis</li>
+            <li><strong>Opportunity Costs:</strong> Value of next-best alternative - INCLUDE in analysis</li>
+            <li><strong>Cannibalization:</strong> When new product reduces sales of existing products - INCLUDE the lost contribution</li>
+        </ul>
+    </div>
+
+    <h4>KEY FORMULAS</h4>
+    <div class="formula">
+        <strong>Free Cash Flow:</strong> EBIT(1-t) + Depreciation - CapEx - Change in Working Capital<br><br>
+        <strong>Incremental Cash Flow:</strong> CF(with project) - CF(without project)<br><br>
+        <strong>Working Capital:</strong> Current Assets - Current Liabilities (typically: Receivables + Inventory - Payables)
+    </div>
+
+    <div class="case-box">
+        <strong>CASE: The New Line Project</strong><br>
+        <strong>Context:</strong> Juan Navarro analyzing investment in new DIY tool line at Herramientas Industriales<br>
+        <strong>Key Issues to Resolve:</strong>
+        <ul>
+            <li>Should cannibalization of old line sales be included? (YES - incremental analysis)</li>
+            <li>Should allocated overhead be included? (NO - not incremental)</li>
+            <li>Should idle capacity cost be charged? (NO - sunk/opportunity cost debate)</li>
+            <li>Working capital needs: 25% Y1, 22% Y2, 20% Y3+</li>
+        </ul>
+        <strong>Investment:</strong> 300,000 machinery + working capital; Required return: 25%
+    </div>
+
+    <div class="followup-questions">
+        <h5>Follow-up Questions for Self-Assessment</h5>
+        <ol class="qa-list">
+            <li data-answer="Sunk costs are past expenditures that cannot be recovered regardless of the decision made (like R&D already spent). They should be excluded because they don't change with the decision. Only future, incremental cash flows matter for investment analysis.">Why should sunk costs be excluded from project cash flow analysis?</li>
+            <li data-answer="Cannibalization occurs when a new product steals sales from existing company products. It SHOULD be included as a negative cash flow in the analysis because those lost sales represent a real cost of the new project from the company's perspective - the incremental analysis requires comparing total company cash flows with vs. without the project.">Should cannibalization effects be included in project analysis? Why?</li>
+            <li data-answer="Working capital ties up cash in operations (inventory, receivables minus payables). Initial investment in working capital is a cash outflow at project start. As the project grows, additional working capital is needed. At project end, working capital is released as inventory is sold and receivables collected - this is a cash inflow.">How does working capital affect project cash flows?</li>
+        </ol>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<h2>PREPARATION FOR NEXT 10 DAYS</h2>
+
+<h3>Monday, February 9</h3>
+<div class="upcoming">
+    <strong>09:00-10:20 - Supply Chain Management Session 7</strong> (WOW Room)<br>
+    <span class="prep-item">Review SC Risks & Resilience concepts</span>
+</div>
+<div class="upcoming">
+    <strong>10:30-11:50 - Data Analytics Session 9</strong> (WOW Room)<br>
+    <span class="prep-item"><a href="https://hbsp.harvard.edu/tu/5c4c759a" target="_blank">Freemark Abbey Winery Case</a></span>
+    <span class="prep-item">Decision Theory introduction</span>
+</div>
+<div class="upcoming">
+    <strong>13:30-14:50 - Leading People & Change Session 6</strong> (Room 1S3)<br>
+    <span class="prep-item"><a href="https://hbsp.harvard.edu/tu/380de463" target="_blank">Woolworths' Dilemma Case</a></span>
+    <span class="prep-item"><a href="https://hbsp.harvard.edu/tu/a8f1fc66" target="_blank">The Performance Management Revolution</a></span>
+    <span class="prep-item"><a href="https://ie.on.worldcat.org/oclc/5220338309" target="_blank">Behind the Mask: Politics of Performance Appraisal</a></span>
+</div>
+
+<h3>Tuesday, February 10</h3>
+<div class="upcoming">
+    <strong>09:00-10:20 - Managerial Economics Session 8</strong> (WOW Room)<br>
+    <span class="prep-item">Review environmental policy concepts</span>
+</div>
+<div class="upcoming">
+    <strong>12:00-14:50 - ISA Data Fluency Sessions 7-8</strong> (WOW Room)<br>
+    <span class="prep-item">Review data analysis techniques</span>
+</div>
+
+<h3>Wednesday, February 11</h3>
+<div class="upcoming">
+    <strong>09:00-10:20 - Managerial Accounting Session 8</strong> (WOW Room)<br>
+    <span class="prep-item">Review Activity-Based Costing</span>
+</div>
+<div class="upcoming">
+    <strong>10:30-11:50 - Data Analytics Session 10</strong> (WOW Room)<br>
+    <span class="prep-item"><a href="https://hbsp.harvard.edu/tu/5c4c759a" target="_blank">Freemark Abbey Winery Case (continued)</a></span>
+    <span class="prep-item">Decision Theory</span>
+</div>
+<div class="upcoming">
+    <strong>12:30-13:50 - Career Accelerator II Session 5</strong> (Room 1S3)<br>
+    <span class="prep-item">Professional development materials</span>
+</div>
+<div class="upcoming">
+    <strong>17:00-18:20 - Finance Interview Prep Session 2</strong> (Online)<br>
+    <span class="prep-item">Review finance fundamentals</span>
+</div>
+
+<h3>Thursday, February 12</h3>
+<div class="upcoming">
+    <strong>09:00-10:20 - BGS Session 9</strong> (WOW Room)<br>
+    <span class="prep-item"><a href="https://ltitools.ie.edu/ESyllabusLTI/material/getDoc?key=jHZKsiZPuGfZ63FYbGWE7pAFxRRKHLRg7jRtBmhn_EB0JemwCdtEyxqkau14xvpOd7XPclHuLczEYTf7" target="_blank">BP: Beyond Petroleum? Case</a></span>
+    <span class="prep-item">Sustainability as Strategy</span>
+</div>
+<div class="upcoming">
+    <strong>12:00-13:20 - Managerial Accounting Session 9</strong> (WOW Room)<br>
+    <span class="prep-item">Advanced costing topics</span>
+</div>
+<div class="upcoming">
+    <strong>13:30-14:50 - Leading People & Change Session 7</strong> (Room 1S3)<br>
+    <span class="prep-item"><a href="https://hbsp.harvard.edu/tu/89a879d9" target="_blank">Performance Pay at Safelite Auto Glass (A)</a></span>
+    <span class="prep-item"><a href="https://hbsp.harvard.edu/tu/1a6c7d97" target="_blank">Six Dangerous Myths About Pay</a></span>
+    <span class="prep-item"><a href="https://ie.on.worldcat.org/oclc/9859416304" target="_blank">Compensation and Performance Review</a></span>
+</div>
+<div class="upcoming">
+    <strong>16:30-17:50 - Supply Chain Management Session 8</strong> (WOW Room)<br>
+    <span class="prep-item">Supply chain strategy topics</span>
+</div>
+
+<h3>Friday, February 13</h3>
+<div class="upcoming">
+    <strong>09:00-11:50 - ISA Project Management Sessions 4-5</strong> (WOW Room)<br>
+    <span class="prep-item">Complete PM Tool Exercise (due Feb 14)</span>
+    <span class="prep-item">Classic Project Management techniques</span>
+</div>
+<div class="upcoming">
+    <strong>13:30-14:50 - Corporate Finance Session 9</strong> (WOW Room)<br>
+    <span class="prep-item"><a href="https://hbsp.harvard.edu/tu/b6266b2d" target="_blank">Friendly Cards, Inc. Case</a></span>
+    <span class="prep-item">Valuing a Project/Firm</span>
+</div>
+
+<h3>Monday, February 16</h3>
+<div class="upcoming">
+    <strong>09:00-10:20 - ISA Project Management Session 6</strong> (WOW Room)<br>
+    <span class="prep-item">Complete PM Simulation (due Feb 16)</span>
+</div>
+<div class="upcoming">
+    <strong>10:30-11:50 - Data Analytics Session 11</strong> (WOW Room)<br>
+    <span class="prep-item">Decision Theory continued</span>
+</div>
+<div class="upcoming">
+    <strong>13:30-14:50 - Leading People & Change Session 8</strong> (Room 1S3)<br>
+    <span class="prep-item"><a href="https://hbsp.harvard.edu/tu/9ad11dc9" target="_blank">SAS Institute Case</a></span>
+    <span class="prep-item"><a href="https://hbsp.harvard.edu/tu/7b4c9318" target="_blank">What Is Psychological Safety?</a></span>
+    <span class="prep-item">Alternative Reward Systems</span>
+</div>
+
+<h3>Tuesday, February 17</h3>
+<div class="upcoming">
+    <strong>09:30-10:50 - Managerial Economics Session 9</strong> (WOW Room)<br>
+    <span class="prep-item">Market regulation topics</span>
+</div>
+<div class="upcoming">
+    <strong>12:00-13:20 - Managerial Accounting Session 10</strong> (WOW Room)<br>
+    <span class="prep-item">Advanced management accounting</span>
+</div>
+<div class="upcoming">
+    <strong>13:30-14:50 - Corporate Finance Session 10</strong> (WOW Room)<br>
+    <span class="prep-item"><a href="https://hbsp.harvard.edu/tu/b6266b2d" target="_blank">Friendly Cards, Inc. Case (continued)</a></span>
+    <span class="prep-item">Capital Raising</span>
+</div>
+
+<h3>Wednesday, February 18</h3>
+<div class="upcoming">
+    <strong>09:00-11:50 - BGS Sessions 10-11</strong> (WOW Room)<br>
+    <span class="prep-item"><a href="https://ltitools.ie.edu/ESyllabusLTI/material/getDoc?key=3eIJRzGoRukRg16mcdJPJxp_iddRqvSlgjqpHFX864LKekagnmzwHskNlxFtP0ztb9tlcJuHQXpOEdv9" target="_blank">The Lake Simulation</a></span>
+    <span class="prep-item">Markets and their Limits</span>
+    <span class="prep-item">ISA AI Activity due</span>
+</div>
+
+<div class="page-break"></div>
+
+<h2>DEADLINES</h2>
+<div class="deadline">
+    <strong>February 14:</strong> ISA Project Management - PM Tool Exercise
+</div>
+<div class="deadline">
+    <strong>February 16:</strong> ISA Project Management - Simulation
+</div>
+<div class="deadline">
+    <strong>February 18:</strong> ISA Project Management - AI Activity
+</div>
+
+<div class="page-break"></div>
+
+<h2>KEY TERMS GLOSSARY</h2>
+<table class="glossary">
+    <tr><td>Shared Value</td><td>Policies that enhance competitiveness while advancing economic and social conditions - economic value through societal value</td></tr>
+    <tr><td>Monte Carlo</td><td>Simulation technique using random sampling to model probability distributions of outcomes</td></tr>
+    <tr><td>Scrum</td><td>Agile framework with Product Owner, Scrum Master, and Development Team working in fixed-length sprints</td></tr>
+    <tr><td>Carbon Tax</td><td>Price per unit of CO2 emissions to internalize environmental externalities</td></tr>
+    <tr><td>Activity-Based Costing</td><td>Cost allocation method based on activities that drive costs rather than volume measures</td></tr>
+    <tr><td>Free Cash Flow</td><td>Cash available to all capital providers after operating expenses and investments</td></tr>
+    <tr><td>Sunk Cost</td><td>Past expenditure that cannot be recovered - should be excluded from investment decisions</td></tr>
+    <tr><td>Supply Chain Resilience</td><td>Ability to anticipate, prepare for, respond to, and adapt to supply disruptions</td></tr>
+    <tr><td>Structured Interview</td><td>Interview format with standardized questions and scoring rubric for all candidates</td></tr>
+    <tr><td>Story Points</td><td>Agile estimation unit measuring relative effort required for user stories</td></tr>
+</table>
+
+<div class="modal-overlay" id="qaModal">
+    <div class="modal-box">
+        <span class="modal-close" id="qaClose">&times;</span>
+        <h4 class="modal-question" id="qaQuestion"></h4>
+        <div class="modal-answer" id="qaAnswer"></div>
+    </div>
+</div>
+
+<script>
+(function() {
+    var modal = document.getElementById('qaModal');
+    var qEl = document.getElementById('qaQuestion');
+    var aEl = document.getElementById('qaAnswer');
+    var closeBtn = document.getElementById('qaClose');
+
+    document.querySelectorAll('.qa-list li').forEach(function(li) {
+        li.addEventListener('click', function() {
+            qEl.textContent = li.textContent;
+            aEl.textContent = li.getAttribute('data-answer');
+            modal.classList.add('active');
+        });
+    });
+
+    closeBtn.addEventListener('click', function() { modal.classList.remove('active'); });
+    modal.addEventListener('click', function(e) { if (e.target === modal) modal.classList.remove('active'); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') modal.classList.remove('active'); });
+})();
+</script>
+
+<hr>
+<p style="text-align: center; color: #718096; font-size: 0.9em;">
+    Generated with Claude Code - February 8, 2026<br>
+    To create PDF: Open in browser &rarr; Ctrl+P &rarr; Save as PDF
+</p>
+</body>
+</html>
